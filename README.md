@@ -8,7 +8,6 @@ Python API to generate a PDF of your resume
 	"mobile_no":"+1 (880) 055-6033",
 	"address":"644 josephine Avenue",
 	"email":"shruti.saini1998@gmail.com",
-	"website":"www.shruti.com",
 	"profile":["Experience in Machine Learning and Data Mining", "Highly passionate and keen learner of upcoming technologies to improve the accuracy of Artificial Intelligence algorithm ", "Capable of communicating effectively with people of various personality types with good speaking and understanding skills"],
 	"technical_skills":["Programming Languages: Python, Java, R, C, C++",
 	"Database Management: MySQL",
