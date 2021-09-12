@@ -1,0 +1,88 @@
+<html>
+<head>
+<link rel="stylesheet" href="static/style.css"/>
+</head>
+<body>
+<div id="header">
+    <p id="name"><strong> {{ name }} </strong></p>
+
+
+     </div>
+
+     <div class="left">
+
+     </div>
+
+     <div class="right">
+            <br>
+            <hr />
+            <p id="info">{{ address }} | {{ mobile_no }} | {{ email }}</p>
+            <h3>Profile</h3>
+            <p>
+            <ul>
+                {% for i in profile %}
+                <li>
+
+                    {{i}}
+                    </li>
+                {% endfor %}
+                </ul>
+            </p>
+            <h3>Technical Skills</h3>
+            <p>
+            <ul>
+                {% for i in technical_skills %}
+                <li>
+
+                    {{i}}
+                    </li>
+                {% endfor %}</ul>
+            </p>
+            <h3>Educational Qualifications</h3>
+<!--            <p>-->
+<!--            <ul>-->
+<!--                {% for i in education %}-->
+<!--                <li>-->
+<!--                    <span>{{i["course_name"] + " " + i["completion_year"]}} <br> </span>-->
+<!--                    {{i["school_name"]}}-->
+<!--                    </li>-->
+
+<!--                {% endfor %}</ul>-->
+<!--            </p>-->
+
+            {% for i in education %}
+
+            <p id="educa-title"><strong>{{i["course_name"] + " " + i["completion_year"]}} <br>
+            </strong> {{ i["school_name"] }}  </p>
+
+            {% endfor %}
+
+            <h3>Work Experience</h3>
+            {% for i in work_experience %}
+
+            <p id="job-title"><strong>{{ i["job_title"] +" "+ i["company_name"] }}</strong></p>
+            <p>
+            <ul>
+            {% for j in i["Job_responsbility"] %}
+                <li>{{j}}</li>{% endfor %}
+                </ul>
+            </p>
+            {% endfor %}
+            <h3>Projects</h3>
+            {% for i in projects %}
+
+            <p id="project-title"><strong>{{  i["project_name"] }}</strong></p>
+            <p>
+            <ul>
+            {% for j in i["project_details"] %}
+                <li>{{j}}</li>{% endfor %}
+                </ul>
+            </p>
+            {% endfor %}
+            <h3>Declaration</h3>
+            <p>
+            I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.</p>
+     </div>
+     <div id="footer"></div>
+    </body>
+</html>
